@@ -1,5 +1,5 @@
 # nodejs + express + sequelize + mysql을 연동한 RESTful BBS
 
-### [Sequelize] (https://sequelize.org/master/)
+### Mysql, MariaDB, Postgress, MariaDB, SQLite, MS-SQL
 
-* Mysql, MariaDB, Postgress, MariaDB, SQLite, MS-SQL
+- [Sequelize] (https://sequelize.org/master/)

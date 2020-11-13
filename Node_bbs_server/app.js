@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const seqDB = require("./models").sequelize; // ./models/index.js 파일을 require 
+seqDB.sync();
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');

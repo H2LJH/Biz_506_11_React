@@ -1,0 +1,13 @@
+.bbs_list{
+    width: 80%;
+    border-collapse: collapse;
+    border: none;
+    margin: 0 auto;
+}
+
+.bbs_list th,
+.bbs_list td
+{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}

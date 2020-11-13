@@ -43,3 +43,6 @@ car["엔진"] = "베타";
 car = { ...car, 엔진: "베타" };
 car = { ...car, 색깔: "흰색" };
 console.log(car);
+
+
+

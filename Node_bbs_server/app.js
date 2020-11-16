@@ -3,6 +3,11 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+
+// Cros Script Policy를 무력화 하기 위한 dependency, React와 API 통신을 수행하는데 Cros Site 오류가 발생하는 것을 방지하기 위해 
+// 서버에서 Cors 정책을 무력화
+const cors = require("cors"); 
+
 const seqDB = require("./models").sequelize; // ./models/index.js 파일을 require 
 seqDB.sync();
 
@@ -11,6 +16,7 @@ const usersRouter = require('./routes/users');
 const apiRouter = require("./routes/api");
 
 const app = express();
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

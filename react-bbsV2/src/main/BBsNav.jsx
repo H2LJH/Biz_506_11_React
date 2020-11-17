@@ -1,17 +1,17 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../css/BBsNav.css";
 
 const BBsNav = () => {
     return (
-      <nav>
+      <nav className="main_nav">
         <ul>
-
           <li>
-            <Link>자유게시판</Link>
+            <Link to="/" className="nav_link">자유게시판</Link>
           </li>
 
           <li>
-              <Link>공지사항</Link>
+            <Link to="/notice" className="nav_link">공지사항</Link>
          </li>
         </ul>
       </nav>

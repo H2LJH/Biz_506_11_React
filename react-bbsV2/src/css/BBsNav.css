@@ -1,0 +1,25 @@
+nav.main_nav{
+    margin: 0;
+    background-color: blue;
+}
+
+nav.main_nav ul{
+    display: flex;
+}
+
+nav.main_nav li{
+    display: inline-block;
+    padding: 13px 15px;
+    margin: 0px;
+}
+
+nav.main_nav .nav_link{
+    color: white;
+    text-decoration: none;
+}
+
+
+nav.main_nav li:hover{
+    background-color: #ddd;
+}
+

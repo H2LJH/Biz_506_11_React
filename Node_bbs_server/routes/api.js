@@ -32,6 +32,7 @@ router.post("/insert", (req, res) =>{
             b_content   : req.body.b_content
         })
         .then((result) =>{
+            console.log(result);
             res.redirect("/api/bbsList");
         })
     .catch((err) =>{
@@ -58,14 +59,14 @@ router.get("/view/:id", (req, res) => {
 });
 
 
-router.post("/update/:id", (req, res)=>{
-    const b_id = req.params.id;
+router.post("/update", (req, res)=>{
+    // const b_id = req.params.id;
     bbsDAO.update({
             b_writer    : req.body.b_writer,
             b_subject   : req.body.b_subject,
             b_content   : req.body.b_content,
 
-    }, {where : {b_id : Number(b_id)} }
+    }, {where : {b_id : Number(req.body.b_id)} }
     ).then((result) =>{
         res.redirect("/api/bbisList");
     }

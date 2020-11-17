@@ -1,0 +1,16 @@
+.car_table{
+    width: 80%;
+    border-collapse: collapse;
+    border: none;
+    margin: 0 auto;
+}
+
+.car_table th{
+    background-color: #ccc;
+}
+
+.car_table th, .car_table td{
+    margin: 5px auto;
+    border-bottom: 1px solid #ddd;
+}
+

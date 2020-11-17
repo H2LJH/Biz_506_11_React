@@ -2,16 +2,14 @@ import React, { Component } from 'react';
 
 class Car_item extends Component 
 {
-
-    test = (e) =>{    
-        localStorage.setItem(e + "", );
-    }
+  onExportItem = (item) => {
+    this.props.fetchItem(item);
+  }
 
     render() {
-         const { item } = this.props;
-         const id = item.id;
+        const { item } = this.props;
         return (
-          <tr onClick = {() => this.test( id )}>
+          <tr onClick={()=> this.onExportItem(item)} style = { {cursor : "pointer"} }>
             <td>{item.id}</td>
             <td>{item.ischeck}</td>
             <td>{item.startDay}</td>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import CarItem from "./Car_item";
 import "../CSS/Car_insert.css";
 
-class Car_insert extends Component {
-    id  = 1;
+class Car_input extends Component {
   state = {
         id : 0,
         startDay : "",
@@ -15,13 +15,14 @@ class Car_insert extends Component {
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
-
   
-  onSave = () =>{       
-        localStorage.setItem(this.id, JSON.stringify(this.state));
-        this.setState({id : ++this.id});
+  onSave = () =>{     
         const { onCreate } = this.props;
         onCreate(this.state);
+  }
+
+  test = (e) =>{
+    this.setState({e});
   }
 
   render() {
@@ -38,5 +39,5 @@ class Car_insert extends Component {
   }
 }
 
-export default Car_insert;
+export default Car_input;
 

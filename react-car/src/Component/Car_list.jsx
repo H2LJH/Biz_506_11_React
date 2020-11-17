@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import CarItem from "./Car_item";
 
 class Car_list extends Component {
-    render() {
-        const { carList } = this.props;
-        const carItem = carList.map( (carItem, index) => { return <CarItem item = {carItem} index = {index}  />; });
 
+  fetchItem = (item) =>{
+    console.log(JSON.stringify(item));
+      this.props.fetchItem(item);
+  }
+
+    render() {
+        const { carList, fetchItem } = this.props;
+        const carItem = carList.map( (carItem) => { return <CarItem item = {carItem} fetchItem={this.fetchItem} />; });
         return (
           <table className="car_table">
             <thead>

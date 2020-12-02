@@ -42,7 +42,7 @@ class Car_main extends Component {
       };
 
   fetchItem(e){
-    this.setState( { e });
+    this.setState();
   }
 
   render() {
@@ -56,3 +56,4 @@ class Car_main extends Component {
 }
 
 export default Car_main;
+
